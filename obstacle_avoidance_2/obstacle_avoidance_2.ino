@@ -43,17 +43,17 @@ void setup() {
 }
 
 void loop() {
-  moveForward();
   // Check for obstacle
-  /*if (checkObstacle()) {
+  if (checkObstacle()) {
     stopMotors();
     delay(500);
+    turnRight();
+    delay(1000);
     
-    if (checkObstacleRight()== true && checkObstacleLeft() == false) {
+    if (checkObstacleRight()) {
+      stopMotors();
+      delay(500);
       turnLeft();
-      delay(1000);
-    } else if (checkObstacleRight()== false && checkObstacleLeft() == true){
-      turnRight();
       delay(1000);
     } else {
       moveForward();
@@ -63,7 +63,7 @@ void loop() {
     delay(500);
   } else {
     moveForward();
-  }*/
+  }
 }
 
 void moveForward() {
